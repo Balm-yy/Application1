@@ -2,6 +2,7 @@ require('dotenv').config();  //Pour lire le fichier .env (connexion à la BDD)
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
+const path = require('path');
 
 
 // ------------------- LOGIN POUR ACCEDER A L'APP ---------------- */
@@ -27,6 +28,15 @@ const auth = (req, res, next) => {
     return res.status(401).send('Authentification requise.');
   }
 };
+
+
+/* -------------------------- FRONT-END PROTEGE PAR LE MDP ----------------- */
+app.use(express.static(path.join(__dirname, 'public')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'categories.html'));
+});
+
+
 
 
 /* --------------------- Connexion a MongoDB --------------------- */
