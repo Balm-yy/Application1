@@ -15,7 +15,7 @@ mongoose.connect(process.env.MONGO_URI)
 /* ------------------------- ROUTES API -------------------------- */
 app.use('/users',           require('./routes/user'));
 app.use('/categories',       require('./routes/category'));
-app.use('/subcategories',    require('/.routes/subcategory'));
+app.use('/subcategories',    require('./routes/subcategory'));
 app.use('/card',             require('./routes/card'));
 
 
