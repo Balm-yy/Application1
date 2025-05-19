@@ -4,7 +4,7 @@ const express = require('express'); //On importe Express pour créer un "mini-ro
 // aux categories que l'on branchera plus tard dans app.js avec app.use('/category', ...)
 const router = express.Router();
 
-const Category = require('../models/Category'); // On importe le modèle Mongoose 'Category' afin de manipuler la collection "category"
+const Category = require('../models/category'); // On importe le modèle Mongoose 'Category' afin de manipuler la collection "category"
 
 // ------------------------------------------------------------------------------------------------------------------------------------
 //  POST /category   -> CREER UNE NOUVELLE CATEGORIE

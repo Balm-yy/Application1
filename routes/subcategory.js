@@ -4,7 +4,7 @@ const express = require('express'); //On importe Express pour créer un "mini-ro
 // aux subcategories que l'on branchera plus tard dans app.js avec app.use('/Subcategorys', ...)
 const router = express.Router();
 
-const Subcategory = require('../models/Subcategory'); // On importe le modèle Mongoose 'Subcategory' afin de manipuler la collection "Subcategorys"
+const Subcategory = require('../models/subcategory'); // On importe le modèle Mongoose 'Subcategory' afin de manipuler la collection "Subcategorys"
 
 // ------------------------------------------------------------------------------------------------------------------------------------
 //  POST /Subcategorys   -> CREER UNE NOUVELLE SUBCATEGORIE

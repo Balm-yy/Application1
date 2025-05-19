@@ -4,7 +4,7 @@ const express = require('express'); //On importe Express pour créer un "mini-ro
 // aux cartes que l'on branchera plus tard dans app.js avec app.use('/cards', ...)
 const router = express.Router();
 
-const Card = require('../models/Card'); // On importe le modèle Mongoose 'Card' afin de manipuler la collection "cards"
+const Card = require('../models/card'); // On importe le modèle Mongoose 'Card' afin de manipuler la collection "cards"
 
 // ------------------------------------------------------------------------------------------------------------------------------------
 //  POST /cards   -> CREER UNE NOUVELLE CARTE

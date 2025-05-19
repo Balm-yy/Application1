@@ -4,7 +4,7 @@ const express = require('express'); //On importe Express pour créer un "mini-ro
 // aux users que l'on branchera plus tard dans app.js avec app.use('/Users', ...)
 const router = express.Router();
 
-const User = require('../models/User'); // On importe le modèle Mongoose 'User' afin de manipuler la collection "Users"
+const User = require('../models/user'); // On importe le modèle Mongoose 'User' afin de manipuler la collection "Users"
 
 // ------------------------------------------------------------------------------------------------------------------------------------
 //  POST /Users   -> CREER UNE NOUVELLE USER
