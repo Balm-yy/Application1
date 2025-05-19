@@ -1,18 +1,18 @@
 const express = require('express'); //On importe Express pour créer un "mini-routeur"
 
 // On instancie le routeur dd'Express. routeur deviendre une 'mini-app' dédié 
-// aux subcategories que l'on branchera plus tard dans app.js avec app.use('/Subcategorys', ...)
+// aux users que l'on branchera plus tard dans app.js avec app.use('/Users', ...)
 const router = express.Router();
 
-const Subcategory = require('../models/subcategory'); // On importe le modèle Mongoose 'Subcategory' afin de manipuler la collection "Subcategorys"
+const User = require('../models/users'); // On importe le modèle Mongoose 'User' afin de manipuler la collection "Users"
 
 // ------------------------------------------------------------------------------------------------------------------------------------
-//  POST /Subcategorys   -> CREER UNE NOUVELLE SUBCATEGORIE
+//  POST /Users   -> CREER UNE NOUVELLE USER
 // ------------------------------------------------------------------------------------------------------------------------------------
 router.post('/', async (req, res) => {
     try {
-        const newSubcategory = await Subcategory.create(req.body);
-        res.status(201).json(newSubcategory);
+        const newUser = await User.create(req.body);
+        res.status(201).json(newUser);
     } catch (err) {
         res.status(400).json({message : "Création impossible", error : err.message});
     }
@@ -21,15 +21,15 @@ router.post('/', async (req, res) => {
 
 
 // -----------------------------------------------------------------------------------------------------------------------------------
-// PUT /Subcategorys -> METTRE A JOUR UNE SUBCATEGORIE
+// PUT /Users -> METTRE A JOUR UNE USER
 // -----------------------------------------------------------------------------------------------------------------------------------
 
 router.put('/:id', async (req, res) => {
     try  {
-        const updated = await Subcategory.findByIdAndUpdate(req.params.id, req.body, {new : true});
-        if (!updated) // subcategorie non trouvé
-            return res.status(404).json({message : "subcategorie non trouvée"});
-        res.json(updated);  //subcategorie modifié renvoyée au client
+        const updated = await User.findByIdAndUpdate(req.params.id, req.body, {new : true});
+        if (!updated) // user non trouvé
+            return res.status(404).json({message : "user non trouvée"});
+        res.json(updated);  //user modifié renvoyée au client
     } catch (err) {
         res.status(400).json({message : "Mise à jour impossible", error : err.mesage});
     }
@@ -38,15 +38,15 @@ router.put('/:id', async (req, res) => {
 
 
 // -----------------------------------------------------------------------------------------------------------------------------------
-// DELETE /Subcategorys -> SUPPRIMER UNE SUBCATEGORIE
+// DELETE /Users -> SUPPRIMER UNE USER
 // -----------------------------------------------------------------------------------------------------------------------------------
 
 router.delete('/:id', async (req, res) => {
     try {
-        const deleted = await Subcategory.findByIdAndDelete(req.params.id);
+        const deleted = await User.findByIdAndDelete(req.params.id);
         if (!deleted)
-            return res.status(404).json({message : "subcategorie non trouvé"});
-        res.json({message : "subcategorie supprimé"});
+            return res.status(404).json({message : "user non trouvé"});
+        res.json({message : "USER supprimé"});
     } catch (err) {
         res.status(400).json({message : "Erreur lors de la suppression", error : err.message});
     }
@@ -54,7 +54,7 @@ router.delete('/:id', async (req, res) => {
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------
-// GET /Subcategorys -> LISTER TOUTES LES SUBCATEGORIES
+// GET /Users -> LISTER TOUTES LES USERS
 // -------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -62,11 +62,8 @@ router.delete('/:id', async (req, res) => {
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------
-// GET /Subcategorys/:id -> RECUPERER UNE SUBCATEGORIE PAR SON ID 
+// GET /Users/:id -> RECUPERER UNE USER PAR SON ID 
 // -------------------------------------------------------------------------------------------------------------------------------------
-
-
-
 
 
 

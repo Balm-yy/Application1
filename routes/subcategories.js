@@ -1,18 +1,18 @@
 const express = require('express'); //On importe Express pour créer un "mini-routeur"
 
 // On instancie le routeur dd'Express. routeur deviendre une 'mini-app' dédié 
-// aux cartes que l'on branchera plus tard dans app.js avec app.use('/cards', ...)
+// aux subcategories que l'on branchera plus tard dans app.js avec app.use('/Subcategorys', ...)
 const router = express.Router();
 
-const Card = require('../models/card'); // On importe le modèle Mongoose 'Card' afin de manipuler la collection "cards"
+const Subcategory = require('../models/subcategories'); // On importe le modèle Mongoose 'Subcategory' afin de manipuler la collection "Subcategorys"
 
 // ------------------------------------------------------------------------------------------------------------------------------------
-//  POST /cards   -> CREER UNE NOUVELLE CARTE
+//  POST /Subcategorys   -> CREER UNE NOUVELLE SUBCATEGORIE
 // ------------------------------------------------------------------------------------------------------------------------------------
 router.post('/', async (req, res) => {
     try {
-        const newCard = await Card.create(req.body);
-        res.status(201).json(newCard);
+        const newSubcategory = await Subcategory.create(req.body);
+        res.status(201).json(newSubcategory);
     } catch (err) {
         res.status(400).json({message : "Création impossible", error : err.message});
     }
@@ -21,15 +21,15 @@ router.post('/', async (req, res) => {
 
 
 // -----------------------------------------------------------------------------------------------------------------------------------
-// PUT /cards -> METTRE A JOUR UNE CARTE
+// PUT /Subcategorys -> METTRE A JOUR UNE SUBCATEGORIE
 // -----------------------------------------------------------------------------------------------------------------------------------
 
 router.put('/:id', async (req, res) => {
     try  {
-        const updated = await Card.findByIdAndUpdate(req.params.id, req.body, {new : true});
-        if (!updated) // Carte non trouvé
-            return res.status(404).json({message : "Carte non trouvée"});
-        res.json(updated);  //Carte modifié renvoyée au client
+        const updated = await Subcategory.findByIdAndUpdate(req.params.id, req.body, {new : true});
+        if (!updated) // subcategorie non trouvé
+            return res.status(404).json({message : "subcategorie non trouvée"});
+        res.json(updated);  //subcategorie modifié renvoyée au client
     } catch (err) {
         res.status(400).json({message : "Mise à jour impossible", error : err.mesage});
     }
@@ -38,15 +38,15 @@ router.put('/:id', async (req, res) => {
 
 
 // -----------------------------------------------------------------------------------------------------------------------------------
-// DELETE /cards -> SUPPRIMER UNE CARTE
+// DELETE /Subcategorys -> SUPPRIMER UNE SUBCATEGORIE
 // -----------------------------------------------------------------------------------------------------------------------------------
 
 router.delete('/:id', async (req, res) => {
     try {
-        const deleted = await Card.findByIdAndDelete(req.params.id);
+        const deleted = await Subcategory.findByIdAndDelete(req.params.id);
         if (!deleted)
-            return res.status(404).json({message : "Carte non trouvé"});
-        res.json({message : "Carte supprimé"});
+            return res.status(404).json({message : "subcategorie non trouvé"});
+        res.json({message : "subcategorie supprimé"});
     } catch (err) {
         res.status(400).json({message : "Erreur lors de la suppression", error : err.message});
     }
@@ -54,7 +54,7 @@ router.delete('/:id', async (req, res) => {
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------
-// GET /cards -> LISTER TOUTES LES CARTES
+// GET /Subcategorys -> LISTER TOUTES LES SUBCATEGORIES
 // -------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -62,8 +62,16 @@ router.delete('/:id', async (req, res) => {
 
 
 // -------------------------------------------------------------------------------------------------------------------------------------
-// GET /cards/:id -> RECUPERER UNE CARTE PAR SON ID 
+// GET /Subcategorys/:id -> RECUPERER UNE SUBCATEGORIE PAR SON ID 
 // -------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
