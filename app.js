@@ -18,7 +18,7 @@ const auth = (req, res, next) => {
   const [username, password] = credentials.split(':');
 
   const validUser = 'Balmyy';
-  const validPass = 'OucacestduMotDePasseDefou12';
+  const validPass = 'LeMDPleplusSimple12';
 
   if (username === validUser && password === validPass) {
     next();
@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // 🔄 Catch-all route → renvoie index.html ou page principale
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html')); // ou 'categories.html'
+  res.sendFile(path.join(__dirname, 'public', 'categories.html')); // ou 'categories.html'
 });
 
 // --------------------- Connexion à MongoDB ---------------------
