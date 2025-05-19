@@ -34,9 +34,9 @@ app.use(auth);
 // 📁 Servir les fichiers statiques
 app.use(express.static(path.join(__dirname, 'public')));
 
-// 🔄 Catch-all route → renvoie index.html ou page principale
+// 🔄 Catch-all route → renvoie categories.html ou page principale
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'categories.html')); // ou 'categories.html'
+  res.sendFile(path.join(__dirname, 'public', 'categories.html')); // ou page d'accueil / login
 });
 
 // --------------------- Connexion à MongoDB ---------------------
@@ -45,10 +45,10 @@ mongoose.connect(process.env.MONGO_URI)
     console.log('✅ Connecté à MongoDB !');
 
     // Routes API
-    app.use('/users', require('./routes/user'));
-    app.use('/categories', require('./routes/category'));
-    app.use('/subcategories', require('./routes/subcategory'));
-    app.use('/card', require('./routes/card'));
+    app.use('/users', require('./routes/users'));
+    app.use('/categories', require('./routes/categories'));
+    app.use('/subcategories', require('./routes/subcategories'));
+    app.use('/cards', require('./routes/cards'));
 
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
