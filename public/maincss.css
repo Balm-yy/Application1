@@ -1,0 +1,142 @@
+* {
+    /*outline: 1px solid red;*/
+    box-sizing: border-box;
+    font-family: 'Chewy', sans-serif;
+}
+@font-face {
+    font-family: 'Chewy';
+    src: url('fonts/Chewy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --lightBackground : #FFFFFF;
+    --darkBackground : #1B1B1B;
+    --lightComponent : #F5E8E8;
+    --darkComponent : #434343;
+    --darkColorFont : #000000;
+    --lightColorFont : #A8A6A6;
+    --whiteColorFont : #FCF4F4;
+    --lightPurple : #AEA3EA;
+    --darkPurple : #705BE5;
+    --mistakeBtn : #FF8585;
+    --validateBtn : #BCFFC1;
+    --pink : #EA97E2;
+    --btnColorFont : #FCF4F4;
+    --lightYellow : #F6E299;
+    --darkYellow : #ECB51D;
+    --veryLighPuple : #E4D7FD;
+    --veryDarkPurple : #6B34B1;
+    --veryLightYellow : #FDF1D7;
+    --veryDarkYellow : #ECB51D;
+    --titlePageTextSize : 40px;
+    --titleElementTextSize : 20px;
+    --contentTextSize : 20px;
+    --btnTextSize : 30px;
+    --smallContentTextSize: 15px;
+    --bigCardTextSize : 100px;
+    --smallCardTextSize : 50px;
+    --bigCongratsTextSize: 60px;
+    --smallCongratsTextSize: 40px;
+}
+
+
+html, body {
+    height: 100dvh;   /* HERE WHEN I PUT DVH THERE IS NOT MORE SUSPICIOUS MARGIN */ /* Car il ne prend que l'écran dynamic*/
+    width: 100vw;
+    font-size: 20px;
+    scrollbar-width: none;
+    overflow-x: hidden;
+}
+
+
+
+/* SMARTPHONE MARGE*/
+/*IPHONE*/
+/*.bottomMargeIphone {
+    width: 100vw;
+    height: 64px;
+}*/
+/*ANDROID*/
+.bottomMargeAndroid {
+    width: 100vw;
+    height: 60px;
+}
+
+
+
+/* HEADER */
+.headerContainer {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    margin-bottom: 20px;
+}
+.header {
+    height: 100px;
+    width: 338px;
+    /*background-color: #6B34B1;*/
+}
+
+.arrow {
+    transform: scaleX(-1);
+}
+
+.arrow2 {
+    align-self: center;
+    margin-left: auto;
+}
+
+.titlePage {
+    font-size: var(--titlePageTextSize);
+    color: var(--darkBackground);
+    font-family: 'Chewy', sans-serif;
+    height: 52px;
+    margin: 0;
+}
+
+.titlePage2 {
+    font-size: var(--titlePageTextSize);
+    color: var(--darkBackground);
+    font-family: 'Chewy', sans-serif;
+    width: 152px;
+    margin: 0;
+}
+
+.descriptionPage {
+    font-family: 'Chewy', sans-serif;
+    color: var(--darkBackground);
+    font-size: var(--smallContentTextSize);
+    height: 45px;
+}
+
+
+
+
+
+/* ADD CARDS BUTTON */
+.addCardsButtonContainer {
+    font-family: 'Chewy', sans-serif;
+    width: 100vw;
+    margin-top: 50px;
+}
+.buttonAddCards {
+    width: 200px;
+    height: 60px;
+    background-color: var(--lightPurple);
+    color: var(--btnColorFont);
+    border-radius: 15px;
+    font-size: var(--btnTextSize);
+}
+
+#purpleMascotSitting {
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 40px;
+}
+
+
+.hide {
+    visibility: hidden;
+}

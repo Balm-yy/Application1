@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-size: 16px;
+    font-family: Inter;
+    scrollbar-width: none;
+}
+
+
+
+
+
+#appName {
+    font-family: 'Chewy', sans-serif;
+    font-size: 60px;
+    position: absolute;
+    top: 15vh;
+    z-index: 2;
+    color: black;
+}
+
+.mascot-container {
+    position: absolute;
+    top: 40%;
+    left: 22%;
+    z-index: 3;
+}
+#mascot-img {
+    height: 200px;
+    width: 200px;
+}
+.button-container {
+    position: absolute;
+    left: 25%;
+    top: 80%;
+    z-index: 3;
+}
+.custom-btn {
+    width: 200px;
+    height: 60px;
+    background-color: var(--btnColorFont);
+    border-radius: 25px;
+    font-size: var(--smallCongratsTextSize);
+    font-family: 'Chewy', sans-serif;
+    color: var(--darkColorFont);
+}
+
+#linkOpenApp {
+    text-decoration: none;
+}
+
+#fondDeCouleur {
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background-color: var(--lightPurple);
+}

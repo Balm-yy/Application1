@@ -1,0 +1,37 @@
+.mascotContainer {
+    height: 500px;
+    overflow: hidden;
+    font-family: 'Chewy',sans-serif;
+    color: var(--pink)
+}
+
+#mascotPinkSitting {
+    width: 280px;
+    margin-top: 40px;
+}
+
+#congratsText {
+    font-size: var(--bigCongratsTextSize);
+}
+
+
+
+
+/* SEE RESULT BUTTON */
+
+.buttonSeeResultContainer {
+    text-decoration: none;
+}
+.buttonSeeResult {
+    width: 200px;
+    height: 60px;
+    background-color: var(--pink);
+    color: var(--btnTextSize);
+    border-radius: 15px;
+}
+
+#seeResult {
+    font-family: 'Chewy', sans-serif;
+    font-size: 30px;
+    color: var(--btnColorFont);
+}

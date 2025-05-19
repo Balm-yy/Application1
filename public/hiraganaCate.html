@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="hiraganaCate.css">
+    <link rel="stylesheet" href="maincss.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>hiraganaCate</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="headerContainer mt-3" >
+        <div class="header">
+            <!-- Fleche retour -->
+            <a href="categories.html"><svg width="20px" class="arrow ms-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></a>
+            <!-- TitlePage -->
+            <div class="d-flex row">
+                <p class="titlePage text-center">HIRAGANA</p>
+                <!-- Description / motivation pharse -->
+                <p class="descriptionPage text-center">Here let's add a phrase about Hiragana or maybe a motivation</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mainContainer">
+        <div class="bgContainer d-flex columns sortable-container">
+                <div id="containerA" class="choosed draggable">
+                    <!-- ELEMENTS -->
+                    <div class="cateHolder">
+                        <div class="title">
+                            <p>Study Elements</p>
+                        </div>
+                        <div class="mascot">
+                            <img src="mascots/purpleMascotProf.svg" width="130px" >
+                        </div>
+                        <div class="clickToLearn">
+                            <p>Click to learn</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="containerB" class="hidden draggable">
+                    <!-- MISTAKES -->
+                    <div class="cateHolder ">
+                        <div class="title">
+                            <p>Study Mistakes</p>
+                        </div>
+                        <div class="mascot">
+                            <img src="mascots/purpleMascotMistakes.svg" width="130px" >
+                        </div>
+                        <div class="clickToLearn">
+                            <p>Click to learn</p>
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+
+    <!-- START BTN -->
+    <div class="d-flex justify-content-center mt-4" id="startExerciseBtn">
+        <a href="HiraganaSectionQuestion.html" class="d-flex justify-content-center" id="btnContainer">
+            <p id="textBtnExercise" class="mt-1">Start Exercise</p>
+        </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <script src="hiraganaCate.js"></script>
+   <!--
+
+   SCRIPT POUT LA VERSION MOBILE 
+   MAIS LE DRAG AND DROP PERMET DE CHANGER L'ORDRE DES CATEGORIES DANS LE DOM 
+   ET NOUS VOULONS SEULEMENT QUE LES CLASSES S'INTERCHANGENT.
+
+   LA VERSION COMPUTER IS WORKING !
+    
+   <scrip src="hiraganaCateMobile.js"></scrip>
+
+   -->
+
+</body>
+</html>

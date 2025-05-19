@@ -1,0 +1,105 @@
+
+
+
+
+
+/* HEADER */
+#header {
+    height: 8vh;
+   /*background-color: green;*/
+}
+
+
+
+
+/* MASCOT FIELD */
+#mascotContainer {
+    /*background-color: red;*/
+    width: 100vw;
+    height: 180px;
+}
+#mascotHelloText {
+    font-family: 'Chewy', sans-serif;
+    font-size: var(--titlePageTextSize);
+}
+#purpleMascotProf {
+    transform: scaleX(-1);
+    padding-top: 20px;
+    width: 110px;
+    height: 126px;
+}
+
+
+
+/*CATEGORIES */
+#categoriesContainer {
+    margin: 0;
+    /*background-color: aqua;*/
+    width: 100vw;   
+    overflow-x: hidden;
+}
+.categorieHolder {
+    font-family: 'Chewy', sans-serif;
+    width : 100vw;  
+    /*background-color: palegreen;*/
+    height: 180px;
+}
+#cateName {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.topics {
+    display: flex;
+    overflow: auto;  /*Permet de scroller horizontalement */
+    gap: 10px;
+    width: 100vw;
+    scrollbar-width: none; /*Permet d'enlever la scrollbar pour Firefox */
+    
+}
+.topics::-webkit-scrollbar {
+    display: none; /* Permet d'enlever la scrollbar pour CHROM? safari et Edge */
+}
+.topic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    height: 110px;
+    width: 150px;
+    text-decoration: none;
+    color: var(--darkColorFont);
+    background-color: var(--lightComponent);
+    white-space: nowrap; /* Empêche la mise ne ligne des éléments */
+    flex-shrink: 0; /* Empêche que les éléments réduise leur taille quand ils n'ont plus de place pour s'afficheir sur la même ligne */
+}
+.lastTopic {
+    width: 20px;
+    height: 50px;
+    white-space: nowrap; /* Empêche la mise ne ligne des éléments */
+    flex-shrink: 0; /* Empêche que les éléments réduise leur taille quand ils n'ont plus de place pour s'afficheir sur la même ligne */
+
+}
+
+.underMenu {
+    height: 90px;
+    width: 100vw;
+}
+
+/*#codingCate {
+    /*background-color: paleturquoise;*/
+    
+/*}*/
+
+
+
+/* NAVBAR */
+/*Fixed to the bottom with 3 icons */
+
+#navBar {
+    position: fixed;
+    bottom: 0;
+    background-color: var(--lightComponent);
+    height: 80px;;
+    width: 100vw;
+
+}

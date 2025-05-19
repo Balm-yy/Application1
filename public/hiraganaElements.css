@@ -1,0 +1,67 @@
+/* ELEMENTS CONTAINER */
+#containerElement {
+    width: 90vw;
+    height: 500px;
+    background-color: var(--darkPurple);
+    border-radius: 15px;
+    font-family: 'Chewy', sans-serif;
+    row-gap: -5px;
+}
+
+.horizontalScrollContainer {
+    height: 95%;
+    padding: 0;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.ligne {
+    width: 100%;
+    padding: 0;
+    
+}
+
+.question {
+    width: 100%;
+    font-size: var(--titleElementTextSize);
+    font-weight:500;
+}
+
+.answer {
+    width: 140px;
+    font-size: var(--smallContentTextSize);
+    text-align: center;
+}
+
+
+
+
+
+/* START BTN */
+#startBtn {
+    margin-top: 10px;
+    gap: 30px;
+}
+
+.buttonExercise {
+    background-color: var(--lightPurple);
+    font-family: 'Chewy', sans-serif;
+    width: 200px;
+    height: 58px;
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+/* LE TEXTE N'EST PAS CENTRE VERTICALEMENT */
+
+#textBtnExercise {
+    color: var(--darkColorFont);
+    font-size: var(--btnTextSize);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#purpleMascotProf {
+    transform: scaleX(-1);
+}

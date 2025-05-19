@@ -1,0 +1,50 @@
+
+
+#mascotResultContainer {
+    margin-top: 40px;
+    padding: 10px;
+    font-family: 'Chewy', sans-serif;
+    font-size: var(--bigCongratsTextSize);
+}
+
+
+
+.fewMistakesContainer {
+    margin-top: 20px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.pinkMistakesContainer {
+    background-color: var(--pink);
+    width: 95vw;
+    height: 400px;
+    border-radius: 15px;
+    padding: 30px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+}
+
+.mistakesContainer {
+    font-family: 'Chewy', sans-serif;
+    font-size: var(--titlePageTextSize);
+    color: var(--darkColorFont);
+    width: 160px;
+    padding: 0;
+}
+
+.mistake {
+    padding: 0;
+    margin-top: 0;
+}
+
+
+
+
+.seeOtherButton {
+    width: 200px;
+    height: 60px;
+    font-family: 'Chewy', sans-serif;
+    text-decoration: underline;
+    color: var(--whiteColorFont)
+}

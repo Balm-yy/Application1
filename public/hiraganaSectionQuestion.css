@@ -1,0 +1,27 @@
+
+
+#cardContainer {
+    width: 100vw;
+    height: 460px;
+    margin-top: 80px;
+}
+
+#card {
+    width: 330px;
+    height: 460px;
+    background-color: var(--lightPurple);
+    border-radius: 15px;
+    position: relative;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
+}
+
+#questionText {
+    font-size: var(--bigCardTextSize);
+    font-family: 'Chewy', sans-serif;
+    position: absolute;
+}
+
+.arrowEnd {
+    position: absolute;
+    bottom: 10px;
+}
