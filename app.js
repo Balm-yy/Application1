@@ -48,10 +48,10 @@ mongoose.connect(process.env.MONGO_URI)
       app.use(auth);
 
       /* ------------------------- ROUTES API -------------------------- */
-      app.use('/users',           require('./routes/user'));
-      app.use('/categories',       require('./routes/category'));
-      app.use('/subcategories',    require('./routes/subcategory'));
-      app.use('/card',             require('./routes/card'));
+      app.use('/Users',           require('./routes/user'));
+      app.use('/Categories',       require('./routes/category'));
+      app.use('/Subcategories',    require('./routes/subcategory'));
+      app.use('/Card',             require('./routes/card'));
 
       app.get('/', (req, res) => {
         res.send('Bienvenue dans ton app protégée par login/mot de passe !');
