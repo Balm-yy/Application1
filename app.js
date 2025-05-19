@@ -1,11 +1,10 @@
-require('dotenv').config();  //Pour lire le fichier .env (connexion à la BDD)
+require('dotenv').config();
 const mongoose = require('mongoose');
 const express = require('express');
-const app = express();
 const path = require('path');
+const app = express();
 
-
-// ------------------- LOGIN POUR ACCEDER A L'APP ---------------- */
+// 🔐 Authentification basique
 const auth = (req, res, next) => {
   const authHeader = req.headers.authorization;
 
@@ -18,49 +17,42 @@ const auth = (req, res, next) => {
   const credentials = Buffer.from(base64Credentials, 'base64').toString('ascii');
   const [username, password] = credentials.split(':');
 
-  const validUser = 'Balmyy';       // remplace par ton username
-  const validPass = 'OucacestduMotDePasseDefou12';     // remplace par ton mot de passe
+  const validUser = 'Balmyy';
+  const validPass = 'OucacestduMotDePasseDefou12';
 
   if (username === validUser && password === validPass) {
-    next();  // accès autorisé
+    next();
   } else {
     res.setHeader('WWW-Authenticate', 'Basic realm="Zone protégée"');
     return res.status(401).send('Authentification requise.');
   }
 };
 
+// 🔐 Protéger TOUTES les routes, y compris le front
+app.use(auth);
 
-/* -------------------------- FRONT-END PROTEGE PAR LE MDP ----------------- */
+// 📁 Servir les fichiers statiques
 app.use(express.static(path.join(__dirname, 'public')));
+
+// 🔄 Catch-all route → renvoie index.html ou page principale
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'categories.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html')); // ou 'categories.html'
 });
 
-
-
-
-/* --------------------- Connexion a MongoDB --------------------- */
+// --------------------- Connexion à MongoDB ---------------------
 mongoose.connect(process.env.MONGO_URI)
-    .then(() => {
-      console.log('✅ Connecté à MongoDB !');
+  .then(() => {
+    console.log('✅ Connecté à MongoDB !');
 
-      // Middleware pour protéger toutes les routes (après la connexion DB)
-      app.use(auth);
+    // Routes API
+    app.use('/users', require('./routes/user'));
+    app.use('/categories', require('./routes/category'));
+    app.use('/subcategories', require('./routes/subcategory'));
+    app.use('/card', require('./routes/card'));
 
-      /* ------------------------- ROUTES API -------------------------- */
-      app.use('/users',           require('./routes/users'));
-      app.use('/categories',       require('./routes/categories'));
-      app.use('/subcategories',    require('./routes/subcategories'));
-      app.use('/card',             require('./routes/cards'));
-
-      app.get('/', (req, res) => {
-        res.send('Bienvenue dans ton app protégée par login/mot de passe !');
-      });
-
-      /* --------------------- Lancement du serveur ----------------------*/
-      const PORT = process.env.PORT || 3000;
-      app.listen(PORT, () => {
-        console.log(`🚀 Serveur prêt : http://localhost:${PORT}`);
-      });
-    })
-    .catch((err) => console.error('❌ Erreur de connexion à MongoDB : ', err));
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+      console.log(`🚀 Serveur prêt : http://localhost:${PORT}`);
+    });
+  })
+  .catch((err) => console.error('❌ Erreur de connexion à MongoDB : ', err));
