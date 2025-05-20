@@ -1,6 +1,7 @@
 require('dotenv').config();  //Pour lire le fichier .env (connexion à la BDD)
 const mongoose = require('mongoose');
 const express = require('express');
+const path = require('path')
 const app = express();
 
 
