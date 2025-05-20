@@ -20,7 +20,7 @@ const auth = (req, res, next) => {
   const [username, password] = credentials.split(':');
 
   const validUser = 'Balmyy';       // remplace par ton username
-  const validPass = 'OucacestduMotDePasseDefou12';     // remplace par ton mot de passe
+  const validPass = '125478';     // remplace par ton mot de passe
 
   if (username === validUser && password === validPass) {
     next();  // accès autorisé
