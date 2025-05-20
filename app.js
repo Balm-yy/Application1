@@ -18,7 +18,7 @@ const auth = (req, res, next) => {
   const [username, password] = credentials.split(':');
 
   const validUser = 'Balmyy';
-  const validPass = 'LeMDPleplusSimple12';
+  const validPass = '125478';
 
   if (username === validUser && password === validPass) {
     next();
