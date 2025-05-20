@@ -44,7 +44,7 @@
 }
 
 .buttonExercise {
-    background-color: var(--lightPurple);
+    background-color: var(--lightYellow);
     font-family: 'Chewy', sans-serif;
     width: 200px;
     height: 58px;
@@ -64,4 +64,8 @@
 
 #purpleMascotProf {
     transform: scaleX(-1);
+}
+
+#yellowMascotChimie {
+    transform: scaleX(1);
 }
