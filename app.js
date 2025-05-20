@@ -60,7 +60,7 @@ app.use('/cards',             require('./routes/cards'));
 
 
 /* ----------------- Front-End statique (optionnel) -------------------------- */
-/*app.use(express.static(path.join(__dirname, 'public')));*/
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 
