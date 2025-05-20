@@ -40,10 +40,31 @@ mongoose.connect(process.env.MONGO_URI)
     console.log('✅ Connecté à MongoDB !');
 
     // Routes API
+    /*console.log('⏳ Loading /users route...');
     app.use('/users', require('./routes/users'));
+
+    console.log('⏳ Loading /categories route...');
     app.use('/categories', require('./routes/categories'));
+
+    console.log('⏳ Loading /subcategories route...');
     app.use('/subcategories', require('./routes/subcategories'));
-    app.use('/cards', require('./routes/cards'));
+
+
+    console.log('⏳ Loading /cards route...');
+    app.use('/cards', require('./routes/cards'));*/
+
+
+    let usersRouter, categoriesRouter, subcategoriesRouter, cardsRouter;
+    usersRouter = require('./routes/users');
+    categoriesRouter = require('./routes/categories');
+    subcategoriesRouter = require('./routes/subcategories');
+    cardsRouter = require('./routes/cards');
+
+    app.use('/users', usersRouter);
+    app.use('/categories', categoriesRouter);
+    app.use('/subcategories', subcategoriesRouter);
+    app.use('/cards', cardsRouter);
+
 
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
