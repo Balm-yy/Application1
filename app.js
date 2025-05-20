@@ -56,5 +56,6 @@ mongoose.connect(process.env.MONGO_URI)
 
 // 🔄 Catch-all route → renvoie categories.html ou page principale
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'categories.html')); // ou page d'accueil ou login
+  res.sendFile(path.join(__dirname, 'public', 'app.html')); // ou page d'accueil ou login
 });
+
