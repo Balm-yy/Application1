@@ -31,7 +31,7 @@ router.put('/:id', async (req, res) => {
             return res.status(404).json({message : "user non trouvée"});
         res.json(updated);  //user modifié renvoyée au client
     } catch (err) {
-        res.status(400).json({message : "Mise à jour impossible", error : err.mesage});
+        res.status(400).json({message : "Mise à jour impossible", error : err.message});
     }
 });
 

@@ -35,15 +35,16 @@ app.use(auth);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // --------------------- Connexion à MongoDB ---------------------
+console.log('MONGO_URI:', process.env.MONGO_URI);
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('✅ Connecté à MongoDB !');
 
     // Routes API
-    /*console.log('⏳ Loading /users route...');
+   console.log('⏳ Loading /users route...');
     app.use('/users', require('./routes/users'));
 
-    console.log('⏳ Loading /categories route...');
+     console.log('⏳ Loading /categories route...');
     app.use('/categories', require('./routes/categories'));
 
     console.log('⏳ Loading /subcategories route...');
@@ -51,19 +52,8 @@ mongoose.connect(process.env.MONGO_URI)
 
 
     console.log('⏳ Loading /cards route...');
-    app.use('/cards', require('./routes/cards'));*/
+    app.use('/cards', require('./routes/cards'));
 
-
-    let usersRouter, categoriesRouter, subcategoriesRouter, cardsRouter;
-    usersRouter = require('./routes/users');
-    categoriesRouter = require('./routes/categories');
-    subcategoriesRouter = require('./routes/subcategories');
-    cardsRouter = require('./routes/cards');
-
-    app.use('/users', usersRouter);
-    app.use('/categories', categoriesRouter);
-    app.use('/subcategories', subcategoriesRouter);
-    app.use('/cards', cardsRouter);
 
 
     const PORT = process.env.PORT || 3000;

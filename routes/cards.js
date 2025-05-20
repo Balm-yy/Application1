@@ -31,7 +31,7 @@ router.put('/:id', async (req, res) => {
             return res.status(404).json({message : "Carte non trouvée"});
         res.json(updated);  //Carte modifié renvoyée au client
     } catch (err) {
-        res.status(400).json({message : "Mise à jour impossible", error : err.mesage});
+        res.status(400).json({message : "Mise à jour impossible", error : err.message});
     }
 });
 
@@ -46,7 +46,7 @@ router.delete('/:id', async (req, res) => {
         const deleted = await Card.findByIdAndDelete(req.params.id);
         if (!deleted)
             return res.status(404).json({message : "Carte non trouvé"});
-        res.json({message : "Carte supprimé"});
+        res.json({message : "Carte supprimée"});
     } catch (err) {
         res.status(400).json({message : "Erreur lors de la suppression", error : err.message});
     }
