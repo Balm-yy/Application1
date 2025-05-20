@@ -10,6 +10,8 @@
     font-style: normal;
 }
 
+/*  ICI RAJOUTER LE CHANGEMENT DE THEME - ENLEVER LES DEF DES THEMES FONCES DE ROUTES  */
+
 :root {
     --lightBackground : #FFFFFF;
     --darkBackground : #1B1B1B;
