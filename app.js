@@ -33,7 +33,7 @@ const auth = (req, res, next) => {
 app.use(auth);
 
 app.get('/', (req, res) => {
-  res.send('Bienvenue dans ton app protégée par login/mot de passe !');
+  res.sendFile(path.join(__dirname, 'public', 'app.html'));
 });
 
 
