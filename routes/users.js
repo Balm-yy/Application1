@@ -46,7 +46,7 @@ router.delete('/:id', async (req, res) => {
         const deleted = await User.findByIdAndDelete(req.params.id);
         if (!deleted)
             return res.status(404).json({message : "user non trouvé"});
-        res.json({message : "USER supprimé"});
+        res.json({message : "user supprimé"});
     } catch (err) {
         res.status(400).json({message : "Erreur lors de la suppression", error : err.message});
     }

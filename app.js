@@ -34,11 +34,6 @@ app.use(auth);
 // 📁 Servir les fichiers statiques
 app.use(express.static(path.join(__dirname, 'public')));
 
-// 🔄 Catch-all route → renvoie categories.html ou page principale
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'categories.html')); // ou page d'accueil / login
-});
-
 // --------------------- Connexion à MongoDB ---------------------
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
@@ -56,3 +51,10 @@ mongoose.connect(process.env.MONGO_URI)
     });
   })
   .catch((err) => console.error('❌ Erreur de connexion à MongoDB : ', err));
+
+
+
+// 🔄 Catch-all route → renvoie categories.html ou page principale
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'categories.html')); // ou page d'accueil ou login
+});
