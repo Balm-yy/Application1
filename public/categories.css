@@ -1,14 +1,22 @@
 
 
 
-
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
 
 /* HEADER */
 #header {
     height: 8vh;
    /*background-color: green;*/
+   color: var(--text-color);
 }
 
+#theme-toggle {
+    all: unset;
+
+}
 
 
 
@@ -21,6 +29,7 @@
 #mascotHelloText {
     font-family: 'Chewy', sans-serif;
     font-size: var(--titlePageTextSize);
+    color: var(--text-color);
 }
 #purpleMascotProf {
     transform: scaleX(-1);
@@ -44,9 +53,10 @@
     /*background-color: palegreen;*/
     height: 180px;
 }
-#cateName {
+.cateName {
     font-size: 20px;
     margin-bottom: 5px;
+    color: var(--text-color)
 }
 .topics {
     display: flex;

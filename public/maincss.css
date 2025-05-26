@@ -13,12 +13,13 @@
 /*  ICI RAJOUTER LE CHANGEMENT DE THEME - ENLEVER LES DEF DES THEMES FONCES DE ROUTES  */
 
 :root {
-    --lightBackground : #FFFFFF;
-    --darkBackground : #1B1B1B;
+    --bg-color : #FFFFFF; /*Theme clair */
+   /* --darkBackground : #1B1B1B;*/
     --lightComponent : #F5E8E8;
     --darkComponent : #434343;
     --darkColorFont : #000000;
-    --lightColorFont : #A8A6A6;
+    --text-color : #000000; /*Theme clair */
+   /* --lightColorFont : #A8A6A6;*/
     --whiteColorFont : #FCF4F4;
     --lightPurple : #AEA3EA;
     --darkPurple : #705BE5;
@@ -43,6 +44,23 @@
     --smallCongratsTextSize: 40px;
 }
 
+
+/* Theme sombre */
+body.dark-mode {
+   /* --bg-color : #1B1B1B !important;
+    --text-color: #A8A6A6 !important;*/
+    
+    /* Redéfinition de la variable Bootstrap */
+    --bs-body-bg: #1B1B1B;
+    --bs-body-color: #A8A6A6;
+}
+
+/* Application des couleurs du theme */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 html, body {
     height: 100dvh;   /* HERE WHEN I PUT DVH THERE IS NOT MORE SUSPICIOUS MARGIN */ /* Car il ne prend que l'écran dynamic*/
@@ -142,3 +160,8 @@ html, body {
 .hide {
     visibility: hidden;
 }
+
+
+
+
+
