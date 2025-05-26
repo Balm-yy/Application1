@@ -47,12 +47,11 @@
 
 /* Theme sombre */
 body.dark-mode {
-   /* --bg-color : #1B1B1B !important;
-    --text-color: #A8A6A6 !important;*/
+   /* --bg-color : #1B1B1B !important;*/
+    --bs-body-color: #A8A6A6;
     
     /* Redéfinition de la variable Bootstrap */
     --bs-body-bg: #1B1B1B;
-    --bs-body-color: #A8A6A6;
 }
 
 /* Application des couleurs du theme */
