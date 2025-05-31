@@ -25,12 +25,14 @@
     width: 100%;
     font-size: var(--titleElementTextSize);
     font-weight:500;
+    color: black;
 }
 
 .answer {
     width: 140px;
     font-size: var(--smallContentTextSize);
     text-align: center;
+    color: black;
 }
 
 

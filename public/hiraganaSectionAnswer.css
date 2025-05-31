@@ -9,14 +9,15 @@
 #card {
     width: 80%;
     height: 70%;
-    background-color: rgba(170, 143, 239, 0.8);
+    background-color: var(--lightPurple);
     border-radius: 15px;
     position: relative;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.3));
 }
 
 .questionContainer, .answerContainer {
-    outline: 1px solid blue;
+   /* outline: 1px solid blue;*/
+    color: black;
 }
 
 .answerContainer {
@@ -24,16 +25,17 @@
 }
 .questionContainer {
     height: 370px;
-    width: 90%;
+    width: 90%; 
 }
 #questionText {
-    max-height: 370px;
-    max-width: 90%;
-    font-size: clamp(12px, 15vw, var(--BigCardTextSize));
+    /*max-height: 370px;
+    max-width: 90%;*/
+    /*font-size: clamp(12px, 15vw, var(--BigCardTextSize));*/
+    font-size: var(--bigCardTextSize);
     font-family: 'Chewy', sans-serif;
     position: absolute;
-    text-overflow: hidden;
-    word-wrap: break-word; /*the text breaks int o a new line if it's too long and exceeds the width's container */
+    /*text-overflow: hidden;
+    word-wrap: break-word; /*the text breaks into a new line if it's too long and exceeds the width's container */
 }
 
 .arrowEnd2 {

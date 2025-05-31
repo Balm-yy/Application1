@@ -2,13 +2,13 @@
 
 #cardContainer {
     width: 100vw;
-    height: 460px;
-    margin-top: 80px;
+    height: 70dvh;
+    margin-top: 90px;
 }
 
 #card {
-    width: 330px;
-    height: 460px;
+    width: 80%;
+    height: 70%;
     background-color: var(--lightPurple);
     border-radius: 15px;
     position: relative;
@@ -19,6 +19,7 @@
     font-size: var(--bigCardTextSize);
     font-family: 'Chewy', sans-serif;
     position: absolute;
+    color: black;
 }
 
 .arrowEnd {
