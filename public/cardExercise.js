@@ -1,3 +1,6 @@
+
+/*
+
 let currentCardIndex = 0;
 let cards = [];
 let mistakes  = [];
@@ -61,3 +64,5 @@ function endSession () {
         });
     }
 }
+
+*/

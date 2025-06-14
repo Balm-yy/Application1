@@ -1,3 +1,6 @@
+/*
+
+
 // middleware/auth.js
 const jwt = require('jsonwebtoken');
 const JWT_SECRET = "super_secret_key";
@@ -14,3 +17,7 @@ module.exports = (req, res, next) => {
         res.status(401).json({ message: "Token invalide" });
     }
 };
+
+
+
+*/
