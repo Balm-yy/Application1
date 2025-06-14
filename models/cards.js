@@ -13,6 +13,11 @@ const cardSchema = new mongoose.Schema({
         type : mongoose.Schema.Types.ObjectId,
         ref : "Subcategory",
         required : true,
+    },
+    userId : {
+        type : mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required : true,
     }
 });
 

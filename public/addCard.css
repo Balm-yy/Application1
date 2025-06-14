@@ -14,11 +14,11 @@
     width: 95vw;
 }
 
-#categoryName {
+.categoryName {
     margin-bottom: 0;
 }
 
-#listName {
+.listName {
     margin-bottom: 0;
     margin-top: 20px;
 }
@@ -30,7 +30,7 @@
     gap: 30%;
 }
 
-#enteteQnA {
+.enteteQnA {
     margin-bottom: 5px;
 }
 
@@ -62,7 +62,13 @@
 
 
 
+.addSectionBtn {
+    border: 1px solid blue;
+}
 
+.addQnALigne { 
+    border: 1px solid red;
+}
 
 
 /* ADD CARDS BUTTON + MASCOT */
