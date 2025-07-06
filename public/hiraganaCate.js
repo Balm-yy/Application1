@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (containerA.contains(clickedElement)) {
                 window.location.href = "hiraganaElements.html";
             } else if (containerB.contains(clickedElement)) {
-                window.location.href = "training.html";
+                window.location.href = "hiraganaMistakes.html";
             } else {
                 window.location.href = "hiraganaCate.html";
             }

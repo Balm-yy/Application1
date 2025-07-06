@@ -1,5 +1,11 @@
 
 
+
+/* CSS */
+
+
+
+/*
 #cardContainer {
     width: 100vw;
     height: 70dvh;
@@ -26,3 +32,125 @@
     position: absolute;
     bottom: 10px;
 }
+*/
+
+
+
+/*
+body, html {
+  margin: 0;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+  background: #fafafa;
+}
+
+
+
+/* Conteneur de la barre de progression */
+#progress-bar-container {
+  width: 100%; /* 90% mais centré */
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+/* Barre de progression colorée */
+#progress-bar {
+  height: 100%;
+  width: 0%; /* La largeur sera mise à jour dynamiquement en JS */
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+
+
+#card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  gap: 20px;
+  position: relative;
+}
+
+/* 🔒 Conteneur fixe pour la carte */
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px; /* même que .card */
+}
+
+/* 💬 La carte ne bouge plus */
+.card {
+  width: /*350px;*/ 80vw;
+  height: 600px;
+  aspect-ratio: 1 / 1; /* rend la carte carrée */
+  background: #fff !important;
+  border: 1px solid #ccc !important;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font: bold 18px/1.3 sans-serif;
+  padding: 20px;
+  user-select: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+}
+.card:hover {
+  background: #f1f1f1;
+  transform: scale(1.03);
+}
+
+/* 🧱 Zone boutons avec taille fixe (même vide) */
+.buttons-wrapper {
+  height: 70px;  /* même hauteur que les boutons */
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: #e0e0e0 !important;
+  cursor: pointer;
+  font-size: 26px;
+  line-height: 56px;
+  text-align: center;
+}
+.btn:hover {
+  background: #d3d3d3;
+}
+
+
+/* 🔁 Bouton Recommencer */
+#restart-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+#restart-button:hover {
+  background: #0056b3;
+}
+
