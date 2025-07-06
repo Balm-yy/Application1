@@ -38,6 +38,13 @@
     padding-top: 10px; /*HERE TO MARGIN WIOULD BE BETTER BUT NOT WORKING */
 }
 
+.QnALigne {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
 
 .inputLarge {
     border-radius: 15px;
@@ -59,6 +66,9 @@
     height: 245px;
     overflow-y: auto;
 }
+
+
+
 
 
 /*
