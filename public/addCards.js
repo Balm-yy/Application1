@@ -85,9 +85,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Synchronisation immediate avec localStorage
 
-localStorage.setItem("cards", JSON.stringify(cards));
+// Récupérer les cartes existantes dans le localStorage
+let existingCards = JSON.parse(localStorage.getItem("cards")) || [];
 
-console.log("Carte enregistrée localement !")
+// Fusionner les cartes existantes avec les nouvelles (éviter doublons si besoin)
+const mergedCards = [...existingCards];
+
+// Ajouter chaque nouvelle carte si elle n'existe pas déjà
+cards.forEach(newCard => {
+  const exists = mergedCards.some(card => 
+    card.question === newCard.question && card.answer === newCard.answer
+  );
+  if (!exists) {
+    mergedCards.push(newCard);
+  }
+});
+
+// Stocker le tout dans localStorage
+localStorage.setItem("cards", JSON.stringify(mergedCards));
+
+console.log("Cartes mises à jour dans le localStorage !");
+
 
 
   });
