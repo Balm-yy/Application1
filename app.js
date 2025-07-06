@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const path = require('path')
 const app = express();
+const cors = require('cors');
 
 
 
@@ -42,6 +43,20 @@ app.get('/', (req, res) => {
 
 
 
+/* -------------------- Connexion au Origines ------------------ */
+const corsOptions = {
+  origin : 'http://localhost:5501', //URL du front-end
+  credentials: true, //Autorise l'envoi des cookies, token dans les requêtes corss-origin
+  optionSuccessStatus: 200 //Pour les anciennes versions de navigateurs
+}
+app.use(cors(corsOptions)); /*Permet d'utiliser toutes les origines si aucun paramètre */
+
+
+//Permet de configurer seulement certaines origines
+/*app.use(cors({
+  origin: 'http://localhost:5501'  // Lien de mon front-end
+}))
+*/
 
 /* --------------------- Connexion a MongoDB --------------------- */
 mongoose.connect(process.env.MONGO_URI)

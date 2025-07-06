@@ -36,17 +36,18 @@
         <!-- CATEGORY NAME -->
         <div class="categoryNameContainer ms-2">
             <p class="categoryName texte">Category Name</p>
-            <input class="inputLarge" type="text" placeholder="Japanese">
+            <input id="categoryName" class="inputLarge" type="text" placeholder="Japanese"/>
         </div>
 
         <!-- LIST NAME -->
         <div class="listNameContainer ms-2">
             <p class="listName texte">List Name</p>
-            <input class="inputLarge" type="text" placeholder="Hiragana">
+            <input id="subcategoryName" class="inputLarge" type="text" placeholder="Hiragana"/>
         </div>
 
         <!-- Q N A section-->
         <div class="QnAContainer d-flex row mt-3">
+            <!-- HEADER -->
             <div class="entete d-flex columns justify-content-center">
                 <p class="enteteQnA texte">Questions</p>
                 <p class="enteteQnA texte">Answers</p>
@@ -54,42 +55,52 @@
 
             <div class="scrollElementVertically">
                 <!-- CARDS CONTENT SECTIONS-->
+                <!-- 1 -->
                 <div class="QnALigne d-flex columns justify-content-around">
                     <p class="texte">1</p>
                     <div class="questionsContainer">
-                        <input class="inputQnA text-center" type="text" placeholder="家"></p>
+                        <input class="inputQnA text-center" type="text" placeholder="家"/>
                     </div>
                     <div class="answerContainer">
-                        <input class="inputQnA text-center" type="text" placeholder="House"></p>
+                        <input class="inputQnA text-center" type="text" placeholder="House"/>
                     </div>
                 </div>
+
+
+                <!-- 2 -->
                 <div class="QnALigne d-flex columns justify-content-around">
                     <p class="texte">2</p>
                     <div class="questionsContainer">
-                        <input class="inputQnA text-center" type="text" placeholder="火"></p>
+                        <input class="inputQnA text-center" type="text" placeholder="火"/>
                     </div>
                     <div class="answerContainer">
-                        <input class="inputQnA text-center" type="text" placeholder="Fire"></p>
+                        <input class="inputQnA text-center" type="text" placeholder="Fire"/>
                     </div>
                 </div>
+
+                <!-- 3 -->
                 <div class="QnALigne d-flex columns justify-content-around">
                     <p class="texte">3</p>
                     <div class="questionsContainer">
-                        <input class="inputQnA text-center" type="text" placeholder="本"></p>
+                        <input class="inputQnA text-center" type="text" placeholder="本"/>
                     </div>
                     <div class="answerContainer">
-                        <input class="inputQnA text-center" type="text" placeholder="Book"></p>
+                        <input class="inputQnA text-center" type="text" placeholder="Book"/>
                     </div>
                 </div>
+
+                <!-- 4 -->
                 <div class="QnALigne d-flex columns justify-content-around">
                     <p class="texte">4</p>
                     <div class="questionsContainer">
-                        <input class="inputQnA text-center" type="text" placeholder="ありがとう"></p>
+                        <input class="inputQnA text-center" type="text" placeholder="ありがとう"/>
                     </div>
                     <div class="answerContainer">
-                        <input class="inputQnA text-center" type="text" placeholder="Thanks"></p>
+                        <input class="inputQnA text-center" type="text" placeholder="Thanks"/>
                     </div>
                 </div>
+
+                <!-- BREAK IT FOR NOW 
                 <div class="QnALigne d-flex columns justify-content-around">
                     <p class="texte">5</p>
                     <div class="questionsContainer">
@@ -144,6 +155,7 @@
                         <input class="inputQnA text-center" type="text" placeholder="Light"></p>
                     </div>
                 </div>
+                        -->
             </div>
 
             <!-- ADD NEW SECTION -->
@@ -171,6 +183,8 @@
     </div>   
 
         <script src="main.js"></script>
+
+        <script src="addCards.js"></script>
 
 </body>
 </html>

@@ -3,11 +3,18 @@
 //  JS
 
 
-const cardsData = [
+let cardsData = JSON.parse(localStorage.getItem("cards"));
+
+if (!cardsData || cardsData.lenght === 0) {
+  cardsData = [
   { question: "Quelle est la capitale de la France ?", answer: "Paris" },
   { question: "2 + 2 ?", answer: "122222222222 222222222222 22222264 2465+ 1566 66666 6666666666 6666666666666 66666664" },
   { question: "Langage utilisé pour le web j hfhbsiuhfbdkjkj u oi  zekjhsdj oçazkhhed   kusdhkjds o oshoqsdr le web j hfhbsiuhfbdkjkj u oi  zekjhsdj oçazkhhed   kusdhkjds o oshoqsdr? le web j hfhbsiuhfbdkjkj u oi  zekjhsdj oçazkhhed   kusdhkjds o oshoqsdr? le web j hfhbsiuhfbdkjkj u oi  zekjhsdj oçazkhhed   kusdhkjds o oshoqsdr? le web j hfhbsiuhfbdkjkj u oi  zekjhsdj oçazkhhed   kusdhkjds o oshoqsdr??", answer: "JavaScript" }
 ];
+localStorage.setItem("cards", JSON.stringify(cardsData));
+}
+
+
 
 let currentIndex = 0;
 let showingAnswer = false;
